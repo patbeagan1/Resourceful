@@ -1,0 +1,54 @@
+plugins {
+    id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.android'
+    id("com.android.library")
+}
+
+apply from: rootProject.file("dependencies.gradle")
+android {
+    compileSdkVersion = 32
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose = true
+    }
+}
+
+dependencies {
+    implementation lib.composeConstraint
+    implementation lib.composeFoundation
+    implementation lib.composeLayout
+    implementation lib.composeMaterial
+    implementation lib.composeMaterialX
+    implementation lib.composeNavigation
+    implementation lib.composeRuntime
+    implementation lib.composeRuntimeLivedata
+    implementation lib.composeTooling
+
+    implementation lib.kotlinStd
+    implementation lib.coreKtx
+
+    implementation lib.material
+}

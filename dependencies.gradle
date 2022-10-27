@@ -1,0 +1,103 @@
+ext.libversion = [
+        room                    : "2.4.2",
+        versionCoroutine        : "1.5.1",
+        versionCompose          : "1.2.0-alpha03",
+        versionKotlin           : "1.5.31",
+        versionNavigationCompose: "2.5.0",
+        versionComposeConstraint: "1.0.0-beta02",
+        placeholderForFormatting: "",
+]
+ext.lib = [
+        // android
+        activityCompose         : "androidx.activity:activity-compose:1.5.0",
+        appcompat               : "androidx.appcompat:appcompat:1.3.1",
+
+        // compose
+        composeLayout           : "androidx.compose.foundation:foundation-layout:$libversion.versionCompose",
+        composeFoundation       : "androidx.compose.foundation:foundation:$libversion.versionCompose",
+        composeMaterialX        : "androidx.compose.material:material-icons-extended:$libversion.versionCompose",
+        composeMaterial         : "androidx.compose.material:material:$libversion.versionCompose",
+        composeRuntimeLivedata  : "androidx.compose.runtime:runtime-livedata:$libversion.versionCompose",
+        composeRuntime          : "androidx.compose.runtime:runtime:$libversion.versionCompose",
+        composeUiTest           : "androidx.compose.ui:ui-test-junit4:$libversion.versionCompose",
+        composeUiTestManifest   : "androidx.compose.ui:ui-test-manifest:$libversion.versionCompose",
+        composeTest             : "androidx.compose.ui:ui-test:$libversion.versionCompose",
+        composeTooling          : "androidx.compose.ui:ui-tooling:$libversion.versionCompose",
+        composeUiUtil           : "androidx.compose.ui:ui-util:${libversion.versionCompose}",
+
+        // compose constraintlayout
+        composeConstraint       : "androidx.constraintlayout:constraintlayout-compose:$libversion.versionComposeConstraint",
+
+        coreKtx                 : "androidx.core:core-ktx:1.6.0",
+        databindingRuntime      : "androidx.databinding:databinding-runtime:7.0.1",
+        fragmentExtensions      : "androidx.fragment:fragment-ktx:1.3.6",
+
+        // hilt
+        hiltViewmodel           : "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02",
+        hiltNavigation          : "androidx.hilt:hilt-navigation-compose:1.0.0",
+
+        legacySupport           : "androidx.legacy:legacy-support-v4:1.0.0",
+
+        // architecture
+        lifecycleLivedata       : "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1",
+        livedata                : "androidx.lifecycle:lifecycle-livedata:2.3.1",
+        lifecycleViewModel      : "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1",
+        lifecycleViewmodel      : "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1",
+
+        // navigation
+        composeNavigation       : "androidx.navigation:navigation-compose:$libversion.versionNavigationCompose",
+        navigationFragment      : "androidx.navigation:navigation-fragment-ktx:2.3.5",
+        navigationUI            : "androidx.navigation:navigation-ui-ktx:2.3.5",
+
+        // room
+        roomCommon              : "androidx.room:room-common:${libversion.room}",
+        roomCompiler            : "androidx.room:room-compiler:${libversion.room}",
+        roomRuntime             : "androidx.room:room-runtime:${libversion.room}",
+
+        // play services
+        playServicesLocation    : "com.google.android.gms:play-services-location:20.0.0",
+        playServicesMap         : "com.google.android.gms:play-services-maps:18.0.2",
+
+        material                : "com.google.android.material:material:1.4.0",
+
+        gson                    : "com.google.code.gson:gson:2.8.6",
+
+        // hilt
+        hilt                    : "com.google.dagger:hilt-android:2.38.1",
+        hiltCompiler            : "com.google.dagger:hilt-compiler:2.38.1",
+
+        composeMaps             : "com.google.maps.android:maps-compose:2.5.0",
+
+        // retrofit
+        okhttp3                 : "com.squareup.okhttp3:logging-interceptor:4.7.2",
+        converter               : "com.squareup.retrofit2:converter-gson:2.9.0",
+        retrofit                : "com.squareup.retrofit2:retrofit:2.9.0",
+
+        // coil
+        coilCompose             : "io.coil-kt:coil-compose:2.1.0",
+        coil                    : "io.coil-kt:coil:2.1.0",
+
+        // junit
+        testJunit               : "junit:junit:4.13.2",
+
+        // kotlin
+        kotlinStd               : "org.jetbrains.kotlin:kotlin-stdlib:$libversion.versionKotlin",
+
+        // coroutines
+        coroutinesAndroid       : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$libversion.versionCoroutine",
+        coroutinesCore          : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$libversion.versionCoroutine",
+        coroutinesTest          : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$libversion.versionCoroutine",
+
+        // mockito
+        mockitoKotlin           : "org.mockito.kotlin:mockito-kotlin:4.0.0",
+        // Ignore
+        placeholderForFormatting: ""
+]
+ext.libpack = [
+        retrofitAll: [
+                lib.gson,
+                lib.retrofit,
+                lib.converter,
+                lib.okhttp3,
+        ]
+]
