@@ -19,7 +19,7 @@ object Styles {
         @Composable
         override fun resolveCompose(): Color = colorCompose
 
-        object Primary : Colors(ColorAttr(androidx.appcompat.R.attr.colorAccent), Color(0))
+        object Primary : Colors(ColorResource(R.color.purple_700), Color(0))
         object Secondary : Colors(ColorResource(R.color.red), Color.Green)
 
         sealed class TextColors(color: ColorUnresolved) : Colors(color) {
